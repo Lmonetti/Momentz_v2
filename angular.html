@@ -1,0 +1,130 @@
+
+<html ng-app="exampleApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular-new.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/angular-daterangepicker/js/angular-daterangepicker.js"></script>
+
+    <link rel='stylesheet' href='public/stylesheets/style.css' />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css"/> 
+    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css"/> 
+
+
+    <script>
+      App = angular.module('exampleApp', ['daterangepicker','ui.bootstrap']);
+      App.controller('TestCtrl', function ($scope) {
+        $scope.date = {startDate: null, endDate: null};
+      });
+      //App.controller('ButtonsCtrl', function ($scope) {
+        //$scope.radioModel = 'Middle';
+      //});
+      App.controller('DropdownCtrl', function ($scope, $log) {
+        $scope.actions = [
+          {id: 'lastHour', name: 'Last Hour'},
+          {id: 'lastHour', name: 'Last Day'},
+          {id: 'lastHour', name: 'Last Week'},
+          {id: 'lastHour', name: 'Last Month'},
+          {id: 'custom', name: 'Custom'},
+        ];
+
+        $scope.setAction = function(action) {
+          $scope.selectedAction = action;
+        };
+
+        $scope.status = {
+          isopen: false
+        };
+
+        $scope.toggled = function(open) {
+          $log.log('Dropdown is now: ', open);
+        };
+
+        $scope.toggleDropdown = function($event) {
+          $event.preventDefault();
+          $event.stopPropagation();
+          $scope.status.isopen = !$scope.status.isopen;
+        };
+      });
+
+      App.controller('TimepickerDemoCtrl', function ($scope, $log) {
+        $scope.mytime = new Date();
+        $scope.hstep = 1;
+        $scope.mstep = 1;
+
+        $scope.options = {
+          hstep: [1, 2, 3],
+          mstep: [1, 5, 10, 15, 25, 30]
+        };
+
+        $scope.ismeridian = true;
+        $scope.toggleMode = function() {
+          $scope.ismeridian = ! $scope.ismeridian;
+        };
+
+        $scope.update = function() {
+          var d = new Date();
+          d.setHours( 14 );
+          d.setMinutes( 0 );
+          $scope.mytime = d;
+        };
+
+        $scope.changed = function () {
+          $log.log('Time changed to: ' + $scope.mytime);
+        };
+
+        $scope.clear = function() {
+          $scope.mytime = null;
+        };
+      });
+
+    </script>
+  </head>
+  <body style="display:block">
+    <div style="display:inline" ng-controller="DropdownCtrl" style="float:left; margin-right: 20px; margin-bottom: 20px;">
+      <!-- Single button -->
+      <div class="btn-group" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+          Timeframe: {{selectedAction.name}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li ng-repeat="action in actions">
+            <a ng-click="setAction(action)">{{action.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--
+    <div ng-controller="ButtonsCtrl">
+      <div class="btn-group">
+          <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'">Hour</label>
+          <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Day</label>
+          <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Week</label>
+          <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Month</label>
+      </div>
+    </div>
+    -->
+    <div ng-controller="TestCtrl" style="display:inline">
+      <!--<input type="submit" style="background:url(public/images/calendar.png)" />-->
+      <input date-range-picker style="width: 300px;display:inline;" class="form-control date-picker" type="text" ng-model="date" />
+      Start Date: {{date.startDate}} <br>
+      End Date: {{date.endDate}}
+    </div>
+
+    <div ng-controller="TimepickerDemoCtrl" style="margin-top:100px; display:inline;">
+      <timepicker style="display:inline;" ng-model="start" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker> 
+      <p style="display:inline; padding: 20px">to</p>
+      <timepicker style="display:inline;" ng-model="end" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+    
+    </div>
+
+
+  </body>
+
+
+</html>
