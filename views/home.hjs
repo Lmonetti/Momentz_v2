@@ -10,7 +10,7 @@
 
   <body>
     {{#topic}}
-      <div class="newspaper"><center><p>{{name}}</p></center></div>
+      <div class="newspaper"><center><p><a href={{url}}>{{name}}</a></p></center></div>
     {{/topic}}
     <div style="padding-bottom: 100px"></div>
 

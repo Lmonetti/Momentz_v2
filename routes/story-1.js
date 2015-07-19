@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+JSON.parse(http://172.24.0.36:55555/getLinks?tid=3);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('story', {

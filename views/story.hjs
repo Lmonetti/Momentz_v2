@@ -9,25 +9,28 @@
   </head>
 
   <body>
-    <div class="topbar" style="margin-top: -40px">
-      <p>Caitlyn Jenner</p>
+    <div class="topbar">
+      <p>{{topicTitle}}</p>
     </div>
 
     {{#topic}}
     <div class="topic2">
-      <a>{{source}}</a>
+      {{#source}}
+      <a>{{name}}</a>
         <hr width="280">
+        {{#article}}
         <div class="storyblock">
-          <a href="#">Article 1</a>
-          <p>July 7th, 2015</p>
+          <a href="{{url}}">{{title}}</a>
+          <br>
+          <p>{{updated}}</p>
         </div>
-        <div class="storyblock">
-          <a href="#">Article 2</a>
-          <p>July 4th, 2015</p>
-        </div>
+        {{/article}}
         <br>
+        {{/source}}
     </div>
     {{/topic}}
+
+    <div style="padding-bottom: 75px"></div>
 
     <div class="menu">
       <ul>

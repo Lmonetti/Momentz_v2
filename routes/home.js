@@ -5,11 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('home', {
     "topic": [
-    {name: 'Caitlyn Jenner', number: '182,687'}, 
-    {name: 'Launching Viasat 2', number: '32,768'}, 
-    {name: 'Same-Sex Marriage', number: '24,164'}, 
-    {name: 'What is going on', number: '6,842'}, 
-    {name: 'Running out of topic', number: '183'}]});
+    {name: 'Viasat-2', number: '182,687', url: "story-3"}, 
+    {name: 'Haiti', number: '32,768', url: "story-4"}, 
+    {name: 'School Shootings', number: '24,164', url: "story-5"}]});
 });
 
 module.exports = router;

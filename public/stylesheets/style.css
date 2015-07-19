@@ -24,6 +24,11 @@ body {
   font-family: "Lato";
 }
 
+p a, p a:hover, p a:visited, p a:active {
+  color: white;
+  text-decoration: none;
+}
+
 p {
   color: white;
 }

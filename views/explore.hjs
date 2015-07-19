@@ -17,12 +17,13 @@
     <div class="topic">
       <ul>
       {{#topic}}
-        <a>{{name}}</a>
+        <a href="/story-{{id}}">{{name}}</a>
         <br>
-        <img src="images/subscription.png" class="img-responsive" /> 
+        <img src="images/subscription.png" class="img-responsive" onclick=openStory({{id}})/> 
         <p>{{number}} subscriptions</p>
         <hr width="280" style="margin-left:-20px">
         <br>
+
       {{/topic}}
       </ul>
     </div>
@@ -38,3 +39,8 @@
     </div>
   </body>
 </htm>
+
+<script>
+  function openStory(id) {
+    return;
+  }

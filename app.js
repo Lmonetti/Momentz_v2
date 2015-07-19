@@ -11,7 +11,9 @@ var home = require('./routes/home');
 var explore = require('./routes/explore');
 var world = require('./routes/world');
 var profile = require('./routes/profile');
-var story = require('./routes/story');
+var story3 = require('./routes/story-3');
+var story4 = require('./routes/story-4');
+var story5 = require('./routes/story-5');
 
 var app = express();
 
@@ -33,7 +35,9 @@ app.use('/home', home);
 app.use('/explore', explore);
 app.use('/world', world);
 app.use('/profile', profile);
-app.use('/story', story);
+app.use('/story-3', story3);
+app.use('/story-4', story4);
+app.use('/story-5', story5);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
