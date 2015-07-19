@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title> World </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />        
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />        
+  </head>
+
+  <body>
+    <div class="title">
+      <center>
+        <p>News</p>
+        <p style="margin-top: -10px">Chunk<p>
+      </center>
+    </div>
+
+    <div class="wrap">
+
+    <input type="text" placeholder="username" required>
+    <div class="bar">
+      <i></i>
+    </div>
+    <input type="password" placeholder="password" required>
+    <a href="" class="forgot_link">forgot ?</a>
+    <button>Sign in</button>
+  </div>

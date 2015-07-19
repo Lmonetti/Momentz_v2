@@ -1,33 +1,3 @@
-
-<!--<!DOCTYPE html>
-<html ng-app>
-  <head>
-    <title>{{ title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/reset.css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel='stylesheet' href='/javascripts/Angular.js'/>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-  </head>
-  <body>
-    <center>
-      <div style="margin-top: 350vh">
-        <h1 style="font-size:350%; color:white;">{{title}}</h1>
-          <div class="wrap">
-            <input type="text" placeholder="username" required>
-            <div class="bar">
-              <i></i>
-            </div>
-            <input type="password" placeholder="password" required>
-            <button>Sign in</button>
-          </div>
-      </div>
-    </center>
-  </body>
-</html>-->
-
 <!DOCTYPE html>
 <html >
   <head>
