@@ -302,20 +302,26 @@ p {
 
 .topic2{
   padding: 10px;
-  margin: 10px 0px;
+  margin: 10px 10px;
   border-radius: 24px;
   background: white;
   width: 85vw;
-  opacity: 0.8;
+    box-shadow: 3px 3px 5px #00003D;
 }  
+
+.topic2 img{
+  max-width: 85vw;
+  margin: 0 auto;
+}
 
 .topic2 a{
   text-decoration: none;
-  font-size: 30px;
+  font-weight: bold;
+  font-size: 25px;
   display: inline;
 } 
 
-.topic p{
+.topic2 p{
   color: #8585AD;
   font-weight: bold;
 }

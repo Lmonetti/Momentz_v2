@@ -6,28 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel='stylesheet' href='/stylesheets/style.css' />        
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/reset.css' />        
+     
   </head>
 
   <body>
-    <div class="topbar">
-      <p>Hot Topics</p>
+    <div class="topbar" style="margin-top: -40px">
+      <p>Hot Articles</p>
     </div>
 
-    <div class="topic2">
+    
       {{#topic}}
+      <div class="topic2" onclick="location.href='{{url}}';">
         <a>{{name}}</a>
         <br>
-        <p>{{source}} - {{date}}</p>
-        <hr width="280">
+        <p style="float:left">{{source}} - {{date}}</p>
         <br>
+        <hr style="width:85vw">
+        <img src="{{image}}" alt="Image" class="img-responsive img-rounded" />
+        <br>
+        </div>
       {{/topic}}
-    </div>
+    
     <div class="topbar">
       <p>New 4 You</p>
     </div>
 
+    {{#new}}
+    <div class="topic2" onclick="location.href='{{url}}';">
+      <a>{{name}}</a>
+      <br>
+      <p style="float:left">{{source}} - {{date}}</p>
+      <br>
+      <hr style="width:85vw">
+      <img src="{{image}}" alt="Image" class="img-responsive img-rounded" />
+      <br>
+      </div>
+    {{/new}}
+
     <div style="padding-bottom: 100px"></div>
+    <div class="menu">
+      <ul>
+        <div class="bullet"><center><a href="/home"><img src="images/home.png" class="img-responsive" width="40" height="35">Home</a></center></div>
+        <div class="bullet"><center><a href="/explore"><img src="images/search.png" class="img-responsive" width="40" height="35">Explore</a></center></div>
+        <div class="bullet"><center><a href="/world"  style="color: #FF9933"><img src="images/medal_2.png" class="img-responsive" width="40" height="35">Top</a></center></div>
+        <div class="bullet"><center><a href="/profile"><img src="images/profile.png" class="img-responsive" width="40" height="35">Profile</a></center></div>
+      </ul>
+    </div>
   </body>
 </html>
