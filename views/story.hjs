@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="testing">
   <head>
     <meta charset="UTF-8">
-    <title> Home </title>
+    <title> {{title}} </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='/stylesheets/style.css' />             
+    <link rel='stylesheet' href='/stylesheets/style.css' />         
   </head>
 
   <body>
+    <div class="topbar">
+      <p>Caitlyn Jenner</p>
+    </div>
+
     {{#topic}}
-      <div class="newspaper"><center><p>{{name}}</p></center></div>
+    <div class="topic2">
+      <a>{{source}}</a>
+        <hr width="280">
+        <div class="storyblock">
+          <a href="#">Article 1</a>
+          <p>July 7th, 2015</p>
+        </div>
+        <div class="storyblock">
+          <a href="#">Article 2</a>
+          <p>July 4th, 2015</p>
+        </div>
+        <br>
+    </div>
     {{/topic}}
-    <div style="padding-bottom: 100px"></div>
 
     <div class="menu">
       <ul>
-        <div class="bullet"><center><a href="/home" style="color: #FF9933"><img src="images/home_2.png" class="img-responsive" width="40" height="35">Home</a></center></div>
+        <div class="bullet"><center><a href="/home"><img src="images/home.png" class="img-responsive" width="40" height="35">Home</a></center></div>
         <div class="bullet"><center><a href="/explore"><img src="images/search.png" class="img-responsive" width="40" height="35">Explore</a></center></div>
         <div class="bullet"><center><a href="/world"><img src="images/medal.png" class="img-responsive" width="40" height="35">Top</a></center></div>
         <div class="bullet"><center><a href="/profile"><img src="images/profile.png" class="img-responsive" width="40" height="35">Profile</a></center></div>
       </ul>
     </div>
   </body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title> Explore </title>
@@ -9,30 +9,32 @@
   </head>
 
   <body>
-    <div class="topbar">
       <form class="form-wrapper cf">
-        <input type="text" placeholder="Search here...">
+        <input type="text" placeholder="Search here..." />
         <button type="submit">Search</button>
       </form>
-    </div>
 
     <div class="topic">
       <ul>
       {{#topic}}
-        <a>{{.}}</a>
+        <a>{{name}}</a>
         <br>
-        <img src="images/home.png" class="img-responsive" width="40" height="35"> 
+        <img src="images/subscription.png" class="img-responsive" /> 
+        <p>{{number}} subscriptions</p>
+        <hr width="280" style="margin-left:-20px">
         <br>
       {{/topic}}
       </ul>
     </div>
+    <div style="padding-bottom: 100px"></div>
 
     <div class="menu">
       <ul>
         <div class="bullet"><center><a href="/home"><img src="images/home.png" class="img-responsive" width="40" height="35">Home</a></center></div>
-        <div class="bullet"><center><a href="/explore"><img src="images/search.png" class="img-responsive" width="40" height="35">Explore</a></center></div>
+        <div class="bullet"><center><a href="/explore" style="color: #FF9933"><img src="images/search_2.png" class="img-responsive" width="40" height="35">Explore</a></center></div>
         <div class="bullet"><center><a href="/world"><img src="images/medal.png" class="img-responsive" width="40" height="35">Top</a></center></div>
         <div class="bullet"><center><a href="/profile"><img src="images/profile.png" class="img-responsive" width="40" height="35">Profile</a></center></div>
       </ul>
     </div>
   </body>
+</htm>
